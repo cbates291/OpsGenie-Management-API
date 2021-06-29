@@ -154,7 +154,7 @@ def send_email(body_content):
     #msg.attach(MIMEText(open(filename).read()))
 
     try:
-        with smtplib.SMTP('smtp.netjets.com', 25) as smtpObj:
+        with smtplib.SMTP('CHANGEME', 25) as smtpObj:
             smtpObj.ehlo()
             smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
